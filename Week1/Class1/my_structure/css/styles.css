@@ -1,0 +1,51 @@
+body {
+	margin: 0pt;
+	padding: 30pt 50pt 20pt 50pt;
+}
+h1, h2, h3 {
+	font-family: helvetica;
+}
+header {
+	color:blue;
+}
+.header-class {
+	padding: 10pt;
+	background-color: yellow;
+}
+.header-text {
+	font-family: georgia;
+	font-style: italic;
+}
+section {
+	font-family: helvetica;
+}
+#section-id {
+	color: purple;
+}
+.section-text {
+	font-family: helvetica;
+}
+#my-id {
+	color: orange;
+}
+.my-class {
+	color: gray;
+}
+footer {
+	color:red;
+}
+.footer-text {
+	font-family: georgia;
+	font-style: italic;
+}
+.batman {
+	font-size: 2em;
+	color: red;
+}
+.batman .superman {
+	font-color: purple;
+	font-weight: bold;
+}
+.batman .wonder-woman {
+	font-style: italic;
+}
