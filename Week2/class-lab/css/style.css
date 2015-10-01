@@ -1,0 +1,70 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+     background-color: #fff;
+}
+header, footer, section {
+  background-color: #ccc;
+  border: 0px;
+  text-align: center;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+  width: 980px;
+  margin: auto;
+  position: relative;
+}
+header, footer {
+  width: 100%;
+  height: 50pt;
+  margin: 10pt 0pt;
+  box-sizing: border-box;
+}
+section {
+  display: inline-block;
+  box-sizing: border-box;
+}
+.main-container {
+  width: 70%;
+  height: 500px;
+}
+.side-container {
+  width: 28%;
+  height: 500px;
+  float: right;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+

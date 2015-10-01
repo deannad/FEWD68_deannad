@@ -3,40 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Deanna's Portfolio</title>
-    <link rel="stylesheet" href="../mywebsite/css/main.css">
+  	<link rel="stylesheet" href="../my_website/css/reset.css">
+    <link rel="stylesheet" href="../my_website/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Bitter:400,400italic,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<nav>
-		<a href="../my_website/index.html">About Me</a> |
-		<a href="../my_website/portfolio.html">Portfolio</a>
-	</nav>
-	<header>
-		<h1>Deanna DeStefano</h1>
-	</header>
-	<section>
-		<h2>Experience</h2>
-	    <p>I recently graduated from a Front-End Web Development course at General Assembly where I learned HTML, CSS, JavaScript, jQuery and how to be an awesome Front-End Web Developer! During my spare time, I enjoy senior water aerobics, pickling, and spending time with my goldfish, Jerry.</p>
-	</section>
-	<section>
-		<h2>Relevant Experience</h2>
-		<h3>Web Developer, Relaxr 2015 - present</h3>
-		<p>Developed a multi-column layout blog, landing page, and contact forms that render on mobile devices.</p>
-		<img src="../my_website/images/relaxr_deliverable.png" alt="Relaxr Website">
-		<h3>Web Developer, Startup Matchmaker 2015 - present</h3>
-		<p>Used a design team's wireframes to develop this company's responsive homepage.</p>
-		<img src="../my_website/images/startup_matchmaker_deliverable.png" alt="Startup Matchmaker Homepage">
-		<h3>Web Developer, CitiPix 2015 – present</h3>
-		<p>Built web app prototype that allows users to store and quickly retrieve photos using keywords.</p>
-		<img src="../my_website/images/citipix_deliverable.png" alt="CitiPix Web App Prototype">
-	</section>
-	<section>
-		<h2>Education</h2>
-		<p>General Assembly — FEWD 2015</p>
-		<p>College of Soft Knocks — B.S. 2009</p>
-		<p>School of Hard Knocks — 2005 (Honors)</p>
-	</section>
-	<footer>
-  		<p>I'm always looking for new and exciting projects. If you'd like to work together, <a href="mailto:deanna.destefano@gmail.com">send me a letter!</a></p>
-	</footer>
+	<div id="container">
+		<header>
+			<nav>
+				<span class="item-one"><img src="https://photos-1.dropbox.com/t/2/AABUjsPft9c9SlVtufciM2kz79bsOszgplsyVr_ht2qvjw/12/9682278/png/32x32/1/_/1/2/bottle.svg/ENjlmwcYm6YJIAIoAg/DnPUNR28ZxlqxmRkRDaNi2DhEqeYu1MLGjFGJwbcUEE?size=1024x768&size_mode=2"><a href="../my_website/index.html">About Me</a></span>
+				<span class="item-two"><img src="https://photos-6.dropbox.com/t/2/AABn7BRyYM6W3McYfknx2s5hWck3EDty0z0ysccW5zupRQ/12/9682278/png/32x32/1/_/1/2/camera.svg/ENjlmwcYnKYJIAIoAg/VVTQW2N-BRhAU6-4Cjg18auz1kV5hZrBvHyO2qzuWJc?size=1024x768&size_mode=2"><a href="../my_website/portfolio.html">Portfolio</a></span>
+			</nav>
+			<h1>Deanna DeStefano</h1>
+		</header>
+		<section class="intro-text">
+			<h2 class="experience-label">Experience</h2>
+		    <p>I recently graduated from a Front-End Web Development course at General Assembly where I learned HTML, CSS, JavaScript, jQuery and how to be an awesome Front-End Web Developer! During my spare time, I enjoy senior water aerobics, pickling, and spending time with my goldfish, Jerry.</p>
+		</section>
+		<section class="experience-container">
+			<h2 class="experience-headline">Relevant Experience</h2>
+			<div class="experience-items">	
+				<div>
+					<img src="../my_website/images/relaxr_deliverable.png" alt="Relaxr Website" class ="portfolio-images">
+					<h3>Web Developer, Relaxr</h3>
+					<h4>2015 - present</h4>
+					<p>Developed a multi-column layout blog, landing page, and contact forms that render on mobile devices.</p>
+				</div>
+				<div>
+					<img src="../my_website/images/startup_matchmaker_deliverable.png" alt="Startup Matchmaker Homepage" class ="portfolio-images">
+					<h3>Web Developer, Startup Matchmaker</h3>
+					<h4>2015 - present</h4>
+					<p>Used a design team's wireframes to develop this company's responsive homepage.</p>
+				</div>
+				<div>
+					<img src="../my_website/images/citipix_deliverable.png" alt="CitiPix Web App Prototype" class ="portfolio-images">
+					<h3>Web Developer, CitiPix</h3>
+					<h4>2015 – present</h4>
+					<p>Built web app prototype that allows users to store and quickly retrieve photos using keywords.</p>
+				</div>
+			</div>
+		</section>
+		<section class="education">
+			<h2 class="education-label">Education</h2>
+			<p>General Assembly — FEWD 2015</p>
+			<p>College of Soft Knocks — B.S. 2009</p>
+			<p>School of Hard Knocks — 2005 (Honors)</p>
+		</section>
+		<footer class="footer-text">
+	  		<p>I'm always looking for new and exciting projects. If you'd like to work together, <a href="mailto:deanna.destefano@gmail.com">send me a letter!</a></p>
+		</footer>
+	</div>
 </body>
 </html>

@@ -1,0 +1,264 @@
+
+#container {
+  width: 980px;
+  margin: auto;
+  position: relative;
+}
+
+/***********************
+/* BODY STYLES
+***********************/
+
+body {
+	/* Color */
+	color: #403838;
+	background-color: #f7f6f6;
+	/* Text */
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	letter-spacing:.005em;
+	line-height:1.2em;
+}
+
+/***********************
+/* HEADING STYLES
+***********************/
+
+h1, h2, h3, h4, h5, h6 {
+	/* Color */
+	color: #403838;
+	/* Text */
+	font-family: 'Bitter', Georgia, serif;
+	font-weight: normal;
+	padding: 5pt 0pt;
+}
+h1 {
+	/* Text */
+	font-size: 2.25em;
+	line-height: 1.15em;
+}
+h2 {
+	/* Text */
+	font-size: 1.75em;
+	line-height: 1.15em;
+}
+h3 {
+	/* Text */
+	font-size: 1.5em;
+	line-height: 1.15em;
+}
+h4 {
+	/* Text */
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+h5 {
+	/* Text */
+	font-size:;
+}
+h6 {
+	/* Text */
+	font-size:;
+}
+
+header {
+	/* Text */
+	text-align: center;
+	/* Display & Box Model */
+	box-sizing: border-box;
+	margin: 10pt 0pt 20pt 0pt;
+}
+section {
+	/* Display & Box Model */
+}
+
+/***********************
+/* TEXT STYLES
+***********************/
+
+.about-text::first-letter{
+	font-size: 2.75em;
+	font-family: 'Bitter', Georgia, serif;
+	font-weight: 700;
+	padding: 5pt 5pt 5pt 0pt;
+	box-sizing: border-box;
+	/* Display & Box Model */
+}
+
+/***********************
+/* LINK STYLES
+***********************/
+
+a:link {
+	/* Display & Box Model */
+	/* Color */
+	color: black;
+	/* Text */
+	text-decoration: none;
+}
+a:visited {
+	/* Display & Box Model */
+	/* Color */
+	color: black;
+	/* Text */
+	text-decoration: none;
+}
+a:hover {
+	/* Color */
+	/* Text */
+	text-decoration: none;
+}
+a:active {
+	/* Color */
+	color: black;
+	/* Text */
+	text-decoration: none;
+}
+nav>a:link {
+	/* Display & Box Model */
+	/* Color */
+	color: white;
+	/* Text */
+	text-decoration: none;
+}
+
+/***********************
+/* NAVIGATION STYLES
+***********************/
+
+nav {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 30pt 0pt 40pt 0pt;
+	text-align: center;
+}
+.item-one img {
+	position: relative;
+	top: 4pt;
+	height: 19pt;
+	padding-right: 9pt;
+}
+.item-two img{
+	position: relative;
+	top: 3pt;
+	height: 15pt;
+	padding-right: 8pt;
+}
+.item-one {
+	/* Color */
+	background-color: white;
+	/* Text */
+	bottom-border: 0;
+	padding-bottom: 0;
+	/*Display & Box Model*/
+	padding: 10pt;
+}
+.item-one:hover, .item-one:active {
+	/* Color */
+	background-color: #f7f6f6;
+	color: white;
+	/* Text */
+	bottom-border: 0;
+	padding-bottom: 0;
+	/*Display & Box Model*/
+	padding: 10pt;
+}
+.item-two {
+	/* Color */
+	background-color: white;
+	/* Text */
+	text-decoration: none;
+	/* Display & Box Model */
+	padding: 10pt;
+}
+.item-two:hover, .item-two:active {
+	/* Color */
+	background-color: #f7f6f6;
+	color: white;
+	/* Text */
+	text-decoration: none;
+	/* Display & Box Model */
+	padding: 10pt;
+}
+
+
+/***********************
+/* LAYOUT ABOUT
+***********************/
+
+.about {
+	width: 100%;
+	padding: 20pt 20pt 0pt 20pt;
+	box-sizing: border-box;
+}
+.about-photo {
+	height: 280pt;
+	position: inherit;
+	float: left;
+	margin-right: 20pt;
+}
+.about-text {
+	width: 100%;
+	padding: 10pt 0pt;
+	margin-bottom: 30pt;
+	box-sizing: border-box;
+}
+
+
+/***********************
+/* LAYOUT PORTFOLIO
+***********************/
+
+.intro-text {
+	display: block;
+	width: 100%;
+	padding: 0pt 0pt 30pt 0pt;
+}
+.experience-label {
+	padding: 20pt 0pt 10pt 0pt;
+	box-sizing: border-box;
+}
+.experience-container {
+	background-color: white;
+	display: inline-block;
+	width: 100%;
+	max-height: 450pt;
+}
+.experience-headline {
+	display: block;
+	text-align: left;
+	width: 100%;
+	padding: 20pt 20pt 10pt 20pt;
+	box-sizing: border-box;
+}
+.experience-items {
+	position: relative;
+	display: inline-flex;
+	flex: 1;
+	flex-flow: row, wrap;
+	width: 250pt;
+	height: 330pt;
+	padding: 10pt;
+	margin-right: 50pt;
+	box-sizing: border-box;
+}
+.portfolio-images {
+	/* Display & Box Model */
+	position: inherit;
+	display: inline-block;
+	width: 200px;
+	border: 4pt solid #f6f6f6;
+}
+.education {
+	display: block;
+	padding: 0pt 0pt 30pt 0pt;
+	box-sizing: border-box;
+}
+.education-label {
+	padding: 20pt 0pt 10pt 0pt;
+}
+.footer-text {
+	display: block;
+	padding: 0pt 0pt 30pt 0pt;
+	box-sizing: border-box;
+}
