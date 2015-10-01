@@ -1,0 +1,262 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #033048;
+     font-size: 13pt;
+     font-family: "Open Sans", Helvetica, sans-serif;
+     line-height: 1.4;
+     background: url(../images/header_bg.jpg) no-repeat center top rgb(134,141,157);
+      background-size: cover;
+}
+
+footer {
+  background-color: #121212;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 24pt;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+h4 {
+  font-size: 16pt;
+}
+
+q {
+  color: white;
+  font-size: 18pt;
+  font-weight: 300;
+  font-style: italic;
+}
+
+button {
+  background-color: #f9e42e;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  width: 140px;
+  height: 34px;
+}
+
+ul {
+  color: #606161;
+}
+
+.benefits-container {
+      background-color: #f0efef;
+      color:;
+      height: 580px;
+      box-sizing: content-box
+}
+
+.button-container {
+  background-color: #f9e42e;
+  height: 120px;
+  box-sizing: content-box
+}
+
+.button-2 {
+  background-color: #033048;
+  color: white;
+  font-size: 12px;
+}
+
+.credit {
+  color: white;
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+.copyright-text {
+  color: white;
+  font-size: 9pt;
+  font-weight: 600;
+  text-align: center;
+}
+
+.facebook {
+  height: 14pt;
+}
+
+.footer-logo {
+  color: #f9e42e;
+  text-align: center;
+}
+
+.logo {
+  color: white;
+}
+
+.quote-container {
+  position: relative;
+  background: url(../images/testimonial_bg.jpg) no-repeat center top rgb(134,141,157);
+  background-size: cover;
+  width: 100%;
+  height: 394px;
+  box-sizing: content-box
+}
+
+.subtitle {
+  color: white;
+  font-weight: 600;
+}
+
+.subtitle-2 {
+  font-weight: 600;
+}
+
+.twitter {
+  height: 14pt;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+  width: 100%;
+  margin: auto;
+  height: 500px;
+
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 120px;
+}
+
+.subtitle {
+  margin-bottom: 60px;
+}
+
+.button-container {
+  text-align: center;
+  box-sizing: content-box
+}
+
+.button-2 {
+  position: relative;
+  top: 40px;
+}
+
+header {
+  width: 100%;
+  height: 650px;
+  box-sizing: content-box
+}
+
+footer {
+  width: 100%;
+  height: 348px;
+  box-sizing: content-box
+}
+
+.benefits-text {
+  padding: 100px  100px 0px 100px;
+}
+
+
+
+.header-elements {
+  position: relative;
+  top: 202px;
+  text-align: center;
+}
+
+.quote {
+  position: relative;
+  top: 130px;
+  width: 490px;
+  text-align: justify;
+}
+
+.footer-logo {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-top: 50px;
+  height: 120px;
+}
+
+.social {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+.copyright-text {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 20%;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+
