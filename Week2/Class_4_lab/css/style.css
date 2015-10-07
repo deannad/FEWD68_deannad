@@ -1,7 +1,7 @@
 /*
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
+Project Name: Relaxr Single Column Layout
+Client: Relaxr
+Author: Deanna DeStefano
 Developer @GA in NYC
 */
 
@@ -45,36 +45,292 @@ Developer @GA in NYC
 /* BASE STYLES
 /*******************************************/
 
-body {
-     color: #000;
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+a {
+  text-decoration: none;
 }
 
+a:hover {
+  opacity: 0.5;
+}
+
+body {
+  color: #033048;
+  font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+button {
+  background-color: #f9e42e;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  width: 140px;
+  height: 34px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  color: #606161;
+  margin-bottom: 10px;
+}
+
+q {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: .05em;
+  line-height: 26px;
+}
+
+ul {
+  color: #606161;
+}
+
+header h1.logo {
+  color: white;
+}
+
+nav a {
+  color: #f9e42e;
+}
+
+
+.logo {
+  font-size: 34px;
+  letter-spacing: .02em;
+}
+
+.header-nav-ul {
+  color: #f9e42e;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-post-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+main article a {
+  color: #033048;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main article p::first-letter {
+  font-size: 70px;
+  font-weight: 600;
+}
+
+hr {
+  color: #033048;
+  background-color: #033048;
+  border-style: none;
+  height: 1px;
+}
+
+#sidebar h3 {
+  font-size: 24px;
+}
+
+#sidebar a {
+  color: #033048;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.section-signup-button {
+  background-color: #033048;
+  color: white;
+}
+
+footer h1.logo {
+  color: #f9e42e;
+  display: inline;
+}
+
+.footer-copyright {
+  color: white;
+  letter-spacing: .05em;
+  font-size: 9px;
+  font-weight: 600;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
 /* Center the container */
+
 #container {
-  width: 960px;
+  width: 100%;
   margin: auto;
+  height: 500px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 header {
+  width: 100%;
+  height:92px;
+  background: #033048;
+  padding: 20px 10%;
+}
 
+header nav {
+  display: inline;
+  position; relative;
+}
+
+ header h1.logo {
+  display: inline;
+  float: left;
+}
+
+ul.header-nav-ul {
+  display: inline;
+  float: right;
+  margin: 11px 0px 0px 0px;
+  list-style-type: none;
+  text-align: right;
+  width: 60%;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 35px;
+}
+
+#content-wrapper {
+  background-color: #f0efef;
+  height: 1760px;
+  padding: 60px 10%;
+}
+
+img.main-post-img{
+  width: 100%;
+  margin-bottom: 30px;
+}
+main {
+  float: left;
+  width: 73%;
+}
+
+main article {
+  margin-bottom: 100px;
+}
+
+.main-post-title {
+  margin-bottom: 30px;
+}
+
+main article p::first-letter {
+  float: left;
+  padding: 10px 10px 0px 0px;
+}
+
+main article a {
+  float: right;
+  padding-top: 30px;
+}
+
+hr {
+  margin-bottom: 60px;
+}
+
+#sidebar {
+  float: right;
+  width: 24%;
+}
+
+#sidebar section {
+  margin-bottom: 40px;
+}
+
+#sidebar section ul li {
+  padding-top: 3px;
+}
+
+.section-signup {
+  background: none;
+    background-color: #f9e42e;
+  height: 100px;
+  padding: 32px 0px;
+  text-align: center;
 }
 
 footer {
+  width: 100%;
+  height: 250px;
+  background-color: #121212;
+  padding: 40px 0px;
+  text-align: center;
+}
 
+footer h1.logo {
+  display: block;
+  position: relative;
+}
+
+.section-signup-twitter {
+  width: 50%;
+  float: left;
+  padding-right: 2%;
+  margin-top: 48px;
+  text-align: right;
+}
+
+.section-signup-facebook {
+  width: 50%;
+  float: right;
+  padding-left: 2%;
+  margin-top: 48px;
+  text-align: left;
+}
+
+.footer-copyright {
+  clear: both;
+  display: block;
+  margin: 125px 0px 0px 0px;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
+.twitter {
+  height: 14pt;
+}
 
-
-
+.facebook {
+  height: 14pt;
+}
