@@ -1,0 +1,26 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17800\viewh14640\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \
+PROGRAM RockPaperScissorsGame:\
+\
+SET paper > rock, rock > scissors, scissors > paper\
+\
+GET playerOneChoice\
+GET playerTwoChoice\
+\
+COMPARE Choices\
+\
+IF playerOneChoice === playerTwoChoice\
+	Print \'93It\'92s a tie!\'94\
+ELSE IF playerOneChoice > playerTwoChoice\
+	Print \'93Player one wins!\'94\
+ELSE IF playerOneChoice < playerTwoChoice\
+	Print \'93Player two wins!\'94\
+ENDIF\
+\
+END.\
+}
