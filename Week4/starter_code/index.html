@@ -21,9 +21,16 @@
 		</header>
 			<div class="container">
 				<form>
-					<input type="text" id="city-type" placeholder="Enter a city name...">
-					<input type="submit" value="Update" id="submit-btn">
+					<input type="text" id="city-type" placeholder="Loading..." value="">
+					<input type="submit" value="Update" id="submit-btn" disabled>
+					<p></p>
 				</form>
 			</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script src="../starter_code/js/main.js"></script>
+			<script> $(document).ready(function() {
+				$("#city-type").attr("placeholder", "Enter a city name..." );
+				});
+			</script>
 	</body>
 </html>
