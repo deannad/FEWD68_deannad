@@ -125,7 +125,7 @@ body {
     line-height: 1.7rem;
 }
 
-button {
+button, input.button {
   background-color: #4083FB;
   border-radius: 40px;
   border: 1px solid #4083fB;
@@ -170,7 +170,7 @@ button {
   height: 27px;
   padding: 0px 12px;
 }
-button:hover {
+button:hover, input.button:hover {
   background-color: #2867D7;
   border: 1px solid #2867D7;
 }
@@ -249,9 +249,8 @@ div.answer td {
 /*******************************************/
 
 .anchor {
-    display:block;
-    padding-top:60px;
-    margin-top:-60px;
+    position: absolute;
+    top: -78px;
  }
 
 #masthead a {
@@ -286,7 +285,6 @@ li p {
   clear: both;
   font-family: "franklinLight", Helvetica, sans-serif;
     font-size: 19px;
-/*    letter-spacing: .008rem;*/
     line-height:1.68rem;
   margin-bottom: 0px;
   padding: 12px 15px 8px 15px;
@@ -325,6 +323,16 @@ div.answer {
   box-shadow: none;
   color: white;
   padding: 5px 15px;
+}
+
+.invisible {
+  border: none;
+  display: none;
+  visibility: collapse;
+}
+
+#formSection div {
+  color: black;
 }
 
 p.policyLinks {
@@ -421,6 +429,7 @@ header {
 
 section {
   margin-bottom: 30px;
+  position: relative;
 }
 
 div.answer img {
@@ -440,9 +449,17 @@ div.answer table {
   background-color: #F6F6F6;
   box-sizing: border-box;
   display: inline-block;
-  height: 80px;
   padding: 23px 20px;
   width: 100%;
+}
+#formSection div {
+  height:48px;
+  padding: 12px 0px;
+  color: black;
+}
+input.button {
+  display: inline;
+  width: 100px;
 }
 
 #helpSection {
@@ -615,36 +632,21 @@ p.policyLinks {
   #pageTopics {
     background-color: white;
     border-bottom: 1px solid #E8E8E8;
-    height: 64px;
     position: sticky;
     position: -webkit-sticky;
       top: 0px;
     margin: 0px;
-    white-space: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 10px 20px 0px 20px;
+    padding: 8px 0px 5px 0px;
     text-align: center;
     width: 100%;
     z-index: 5;
   }
-/*  #mobile-nav-button {
-    background-color: #F6F6F6;
-    border: none;
-    border-radius: 3px;
-    display: block;
-    padding: 3px 6px 0px 6px;
-    visibility: visible;
-  }*/
 
   .menuItem {
     display: inline-block;
     padding: 5px 10px;
+    margin-bottom: 5px;
     text-align: center;
-  }
-  .menuItem:hover {
-    background-color: #4083FB;
-    color: white;
   }
 
   #pageFaqs {
@@ -680,11 +682,6 @@ p.policyLinks {
     margin-bottom: 13px;
     width: 100%;
   }
-   #formSection button {
-    margin: auto;
-    text-align: center;
-    width: 50%;
-   }
 
   div.feedbackSection {
     width: 100%;
