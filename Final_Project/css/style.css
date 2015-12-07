@@ -1,0 +1,711 @@
+/*
+Project Name: Puzzles FAQ Page - Web
+Client: New York Times
+Author: Deanna DeStefano
+Developer @GA in NYC
+*/
+
+
+/*******************************************/
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/*******************************************/
+/* FONTS
+/*******************************************/
+
+
+@font-face {
+  font-family: franklinLight;
+  src: url(../fonts/NYTFranklinLight.otf);
+}
+@font-face {
+  font-family: franklinMedium;
+  src: url(../fonts/NYTFranklinMedium.otf);
+}
+@font-face {
+  font-family: franklinMediumItalic;
+  src: url(../fonts/NYTFranklinMediumItalic.otf);
+  font-style: italic;
+}
+@font-face {
+  font-family: franklinBold;
+  src: url(../fonts/NYTFranklinBold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: franklinHeadline;
+  src: url(../fonts/NYTFranklinHeadline.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: franklinSemiboldItalic;
+  src: url(../fonts/NYTFranklinSemiboldItalic.otf);
+  font-style: italic;
+}
+@font-face {
+  font-family: stymieExtraBold;
+  src: url(../fonts/NYTStymieExtraBold.otf);
+  font-style: bold;
+}
+@font-face {
+  font-family: karnakText;
+  src: url(../fonts/NYTKarnakText.otf);
+}
+
+/*******************************************/
+/* BASE STYLES
+/*******************************************/
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+div.answer a {
+  color: #246BEA;
+  padding: 4px 0px 1px 0px;
+  text-decoration: none;
+}
+div.answer a:hover {
+  background-color: white;
+  border-bottom: 1px solid #699FFF;
+  padding: 4px 0px 1px 0px;
+}
+div.answer a:visited {
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #94BAFE;
+  color: #4B8CFF;
+  padding: 4px 0px 1px 0px;
+}
+
+body {
+  color: #333333;
+  font-family: "franklinMedium", Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.7rem;
+}
+
+button {
+  background-color: #4083FB;
+  border-radius: 40px;
+  border: 1px solid #4083fB;
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: "franklinBold", Helvetica, sans-serif;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  height: 34px;
+  margin-bottom: 4px;
+  padding: 0px 25px;
+  vertical-align: middle;
+}
+.secondary {
+  background-color: white;
+  border: 2px solid #E8E8E8;
+  border-radius: 40px;
+  color: black;
+  font-family: "franklinHeadline", Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  padding: 10px 25px;
+  margin-bottom: 4px;
+  margin-right: 6px;
+}
+.tertiary {
+  background-color: #F6F6F6;
+  border: none;
+  border-radius: 40px;
+  box-shadow: none;
+  color: black;
+  font-family: "franklinHeadline", Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  height: 27px;
+  padding: 0px 12px;
+}
+button:hover {
+  background-color: #2867D7;
+  border: 1px solid #2867D7;
+}
+.secondary:hover {
+  background-color: #E8E8E8;
+}
+.tertiary:hover {
+  background-color: #E8E8E8;
+}
+
+h1, h2, h3, h4 {
+  clear: both;
+  font-family: "franklinBold", Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+h5 {
+  clear: both;
+  font-family: "stymieExtraBold", Georgia, serif;
+    color: black;
+  font-size: 17px;
+}
+h1 {
+  font-size: 30px;
+  padding-bottom: 10px;;
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  padding-bottom: 4px;
+}
+h4 {
+  font-size: 15px;
+  padding-bottom: 4px;
+}
+
+input {
+  background-color: white;
+/*  border-radius: 4px;*/
+  border: 1px solid #E8E8E8;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,.05);
+  display: inline;
+  height: 34px;
+  margin-right: 8px;
+  padding: 15px;
+  width: 75%;
+}
+
+p {
+  color: black;
+  margin-bottom: 10px;
+  line-height: 1.3em;
+}
+
+div.answer {
+  overflow: hidden;
+}
+div.answer img {
+  background-color: white;
+}
+div.answer table {
+  margin: 10px 0px;
+}
+div.answer td {
+  border: 1px solid #CCCCCC;
+  padding: 10px;
+}
+
+/*******************************************/
+/* CUSTOM STYLES
+/*******************************************/
+
+.anchor {
+    display:block;
+    padding-top:60px;
+    margin-top:-60px;
+ }
+
+#masthead a {
+  color: black;
+  text-decoration: none;
+}
+.puzzleLogo {
+  font-family: "karnakText", Georgia, serif;
+    font-size: 33px;
+    letter-spacing: 0.02rem;
+}
+#branding-heading-link img {
+  width: 145px;
+}
+
+#helpIntroArea h1, #helpIntroArea p {
+  color: white;
+}
+#helpIntroArea p {
+  font-size: 17px;
+}
+
+li p.question:hover {
+  background-color: #F1F1F1;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+li p {
+  box-sizing: border-box;
+  clear: both;
+  font-family: "franklinLight", Helvetica, sans-serif;
+    font-size: 19px;
+/*    letter-spacing: .008rem;*/
+    line-height:1.68rem;
+  margin-bottom: 0px;
+  padding: 12px 15px 8px 15px;
+}
+
+div.answer {
+  background-color:#F6F6F6;
+  box-shadow: inset 0px 1px 0px #E8E8E8;
+  display: none;
+  font-family: "franklinMedium";
+  font-size: .96rem;
+  height: auto;
+  line-height:1.3rem;
+  padding: 20px 15px;
+}
+
+.menuItem {
+  color: black;
+  font-family: "franklinHeadline", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+}
+.menuItem:hover {
+  background-color: #F6F6F6;
+  border-radius: 40px;
+  box-shadow: none;
+  color: black;
+}
+.active {
+  background-color: #4083FB;
+  border-radius: 40px;
+  box-shadow: none;
+  color: white;
+  padding: 5px 15px;
+}
+
+p.policyLinks {
+  font-family: "franklinMedium", Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 11px !important;
+  padding-top: 1px;
+  text-transform: uppercase;
+}
+
+
+/*******************************************/
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+
+#container {
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  background-color: white;
+  border-bottom: 1px solid #CCCCCC;
+  box-shadow: 0px 1px 4px rgba(0,0,0,.18);
+  display: block;
+  height: 48px;
+  margin:auto;
+  position: fixed;
+  padding: 10px;
+  width: 100%;
+  z-index:4;
+}
+
+#branding-heading-link {
+  position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
+.puzzleLogo {
+  text-align: center;
+}
+
+#helpIntroArea {
+  clear: both;
+  background-color: #4083FB;
+    box-shadow: inset 0px -1px 30px rgba(1,4,59,.15);
+  display: block;
+  height: 238px;
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 84px 40px 30px 40px;
+  text-align: center;
+}
+
+.thickBorderBottom {
+  border-bottom: 3px solid #2867D7;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 70px;
+}
+
+.thinBorderBottom {
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.thinBorderTop {
+  border-top: 1px solid #E8E8E8;
+}
+
+#mobile-nav-button {
+  display: none;
+  visibility: collapse;
+}
+
+#pageTopics {
+  background-color: white;
+  float: left;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 63px;
+  margin: 0px 15px 0px 25px;
+  padding-right: 10px;
+  width: 20%;
+}
+
+#pageFaqs {
+  float: right;
+  margin-right: 40px;
+  width: 66%;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+div.answer img {
+  float: left;
+  height: 200px;
+  margin: 0px 20px 10px 5px;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+}
+
+div.answer table {
+  width: 100%;
+}
+
+#formSection {
+  background-color: #F6F6F6;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 80px;
+  padding: 23px 20px;
+  width: 100%;
+}
+
+#helpSection {
+  display: inline-block;
+  height: 74px;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+footer {
+  clear: both;
+  display: block;
+}
+
+div.feedbackSection {
+  height: 150px;
+  margin: auto;
+  padding: 20px 0px;
+  width: 78%;
+}
+
+div.feedbackWidth {
+  margin: auto;
+  width: 50%;
+}
+
+h5.feedbackTitle {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  padding-top: 3px;
+  text-align: right;
+}
+
+.feedbackText {
+  float: right;
+  width: 70%;
+}
+
+.feedbackText p {
+  float: left;
+  padding-top: 5px;
+}
+
+a.tertiary {
+  display: inline;
+  float: right;
+}
+
+div.footerLinks {
+  height: 64px;
+  margin: 0px;
+  padding: 15px 40px;
+}
+
+.footerLinks p {
+  color: #999999;
+  display: inline-block;
+  font-size: .8rem;
+  float: left;
+}
+
+#backToTop {
+  position: fixed;
+  top:;
+}
+
+.nytWebStyle {
+  color: black;
+  font-family: "franklinBold", Helvetica, sans-serif;
+}
+
+.vertTextDivStyle {
+  color: #DDDDDD;
+  font-family: "franklinMedium", Helvetica, sans-serif;
+}
+
+p.policyLinks {
+  float: right;
+}
+
+/*******************************************/
+/* MEDIA QUERIES AND SYTLES
+/*******************************************/
+
+/* TABLET
+/*******************************************/
+
+@media screen and (max-width:867px) and (min-width: 636px){
+  .puzzleLogo {
+    font-size: 28px;
+  }
+  #helpIntroArea {
+    margin-bottom: 0px;
+  }
+
+  #pageTopics {
+    background-color: white;
+    border-bottom: 1px solid #E8E8E8;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    margin: 0px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .menuItem {
+    display: inline;
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  .menuItem:hover {
+    background-color: #4083FB;
+    color: white;
+  }
+
+  #pageFaqs {
+    margin: 0px;
+    margin-top: 30px;
+    padding: 0px 30px;
+    width: 100%;
+  }
+  li p {
+    font-size: 17px;
+    line-height: 1.48rem;
+    padding: 12px 15px 10px 15px;
+  }
+  div.feedbackSection {
+    width: 100%;
+  }
+
+  div.footerLinks {
+    margin: 0px;
+    padding: 15px 30px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:678px) and (min-width: 636px){
+  div.footerLinks {
+    padding-top: 13px;
+  }
+  div.footerLinks p {
+    margin-bottom: 4px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* PHONE
+/*******************************************/
+
+@media screen and (max-width: 636px){
+  #branding-heading-link img {
+    display: none;
+  }
+  .puzzleLogo {
+    font-size: 28px;
+  }
+
+  #helpIntroArea {
+    margin-bottom: 0px;
+  }
+
+  #pageTopics {
+    background-color: white;
+    border-bottom: 1px solid #E8E8E8;
+    height: 64px;
+    position: sticky;
+    position: -webkit-sticky;
+      top: 0px;
+    margin: 0px;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 20px 0px 20px;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+  }
+/*  #mobile-nav-button {
+    background-color: #F6F6F6;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    padding: 3px 6px 0px 6px;
+    visibility: visible;
+  }*/
+
+  .menuItem {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  .menuItem:hover {
+    background-color: #4083FB;
+    color: white;
+  }
+
+  #pageFaqs {
+    margin: 0px;
+    margin-top: 30px;
+    padding: 0px 30px;
+    width: 100%;
+  }
+
+  li p {
+    font-size: 17px;
+    line-height: 1.48rem;
+    padding: 12px 15px 10px 15px;
+  }
+  div.answer img {
+    display: block;
+    float: none;
+    height: 200px;
+    margin: 0px 0px 10px 0px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  form#formSection {
+    height: 125px;
+    overflow: hidden;
+    text-align: center;
+  }
+  input {
+    margin-right: 0px;
+    margin-bottom: 13px;
+    width: 100%;
+  }
+   #formSection button {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+   }
+
+  div.feedbackSection {
+    width: 100%;
+    padding: 20px;
+  }
+  div.feedbackWidth {
+    margin: auto;
+    width: 90%;
+  }
+
+  div.footerLinks {
+    padding: 13px 20px;
+    margin: 0px;
+  }
+  div.footerLinks p {
+    margin-bottom: 4px;
+    text-align: center;
+    width: 100%;
+  }
+  div p.policyLinks {
+    font-size: 9.5px !important;
+    line-height: 1.3em !important;
+  }
+}

@@ -57,6 +57,37 @@ a {
   text-decoration: none;
 }
 
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{ 
+    visibility: hidden !important;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+  color: #043049;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
 .logo {
   font-size: 48px;
   font-weight: 800;
@@ -64,31 +95,85 @@ a {
 
 header {
   background: #033048;
+  padding: 25px 0;
+  overflow: hidden;
 }
 header .logo {
   color: #fff;
+  float: left;
 }
 
+header nav {
+  float: right;
+  margin-top: 15px;
+}
 header nav ul li {
+  display: inline-block;
+  margin: 0 0 0 40px;
   font-size: 24px;
 }
 header nav ul li a {
   color: #f9e42e;
 }
 
-#hero {
-  background: url(../images/header_bg.jpg) no-repeat top center #131e27;
+#contact h1 {
+  text-align: left;
+  display: inline-block;
+  float: left;
 }
+
+#contact span {
+  display: inline-block;
+  float: right;
+  margin: 10px 5px 20px 0px;
+}
+
+#contact form {
+  width: 600px;
+  margin: auto;
+  clear: both;
+}
+
+.signupText {
+  color: black;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  float: none;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+#confirm{
+  visibility: collapse;
+}
+
+#confirm h1{
+  text-align: center;
+}
+
+#confirm p{
+  text-align: center;
+  margin-bottom:20px;
+}
+
+#hero {
+  height: 700px;
+  background: url(../images/header_bg.jpg) no-repeat top center #131e27;
+  padding-top: 32px;
+}
+
 #hero .logo {
   color: #fff;
 }
-
 #hero h2 {
   font-size: 48px;
+  text-align: center;
   color: #fff;
+  margin: 120px 0 90px;
   font-weight: 600;
 }
-
 .button {
   border-radius: 5px;
   font-weight: 800;
@@ -96,47 +181,84 @@ header nav ul li a {
   width: 280px;
   font-size: 28px;
   text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: none;
 }
-
 .yellow {
   background: #f9e42e;
   color: #033048;
 }
 
+.text {
+  height:34px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,0.10);
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  width: 170px;
+}
 .blue {
   background: #033048;
   color: #fff;
   font-size: 24px;
 }
-
+#benefits {
+  padding: 100px 0 80px;
+}
 h3 {
   color: #033048;
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 40px;
 }
-
+#benefits p, #benefits ul {
+  width: 600px;
+}
 #benefits ul {
   list-style: disc;
+  margin: 30px 0 0 80px;
 }
-
 #testimonial {
   background: url(../images/testimonial_bg.jpg) no-repeat top center #071324;
+  padding: 70px 0 70px;
   color: #fff;
 }
-
 blockquote {
   font-size: 36px;
   font-weight: 300;
   font-style: italic;
   text-align: center;
+  width: 75%;
+  margin: 0 auto;
 }
-
 blockquote span {
   font-weight: 600;
+  display: block;
   font-style: normal;
 }
-
+#main {
+  margin-top: 80px;
+}
+#posts {
+  width: 73%;
+  display: inline-block;
+  margin-right: 1.95%;
+  vertical-align: top;
+}
+#sidebar {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+.post {
+  border-bottom: 1px solid #043049;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
 .post h2 {
   font-weight: 600;
   font-size: 40px;
@@ -145,6 +267,10 @@ blockquote span {
 }
 .post h2 a {
   color: #043049;
+}
+
+.post img {
+  margin-bottom: 30px;
 }
 .post p {
   font-size: 24px;
@@ -160,7 +286,10 @@ blockquote span {
   padding-left: 3px;
   font-weight: 600;
 }
-
+.readmore {
+  text-align: right;
+  margin-top: 30px;
+}
 .readmore a {
   color: #043049;
   font-weight: 600;
@@ -192,6 +321,9 @@ blockquote span {
   margin-bottom: 15px;
   color: #043049;
 }
+#sidebar ul {
+  margin-bottom: 40px;
+}
 #sidebar ul li a {
   color: #043049;
   font-size: 24px;
@@ -206,22 +338,20 @@ blockquote span {
   font-weight: 600;
 }
 
-#hero h2 {
-  text-align: center;
-  margin: 120px 0 90px;
-}
-
 #bottom-cta {
   background: #f9e42e;
+  padding: 30px;
   text-align: center;
 }
 
 footer {
   background: #121212;
+  padding: 65px 0 45px;
   text-align: center;
 }
 footer .logo {
   color: #f9e42e;
+  margin-bottom: 68px;
 }
 footer ul li {
   display: inline-block;
@@ -233,160 +363,89 @@ footer p {
   color: #fff;
   font-weight: 600;
 }
-
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-
-/* Center the container */
-.container {
+#contact {
   width: 100%;
-  margin: 0 auto;
+  height: 450px;
+  padding: 0px;
+}
+form {
+  margin: 20px 0px 50px 0px;
 }
 
-
-/*******************************************/
-/* DESKTOP
-/*******************************************/
-
-@media (min-width: 769px) {
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
   header {
-    padding: 25px;
-    overflow: hidden;
-    width: 100%;
+    padding: 10px;
   }
-  header .logo {
-    float: left;
+  h3 {
+    font-size: 30px;
   }
-  header nav {
-    float: right;
-    margin-top: 15px;
+  .logo {
+    font-size: 36px;
   }
   header nav ul li {
-    display: inline-block;
-    margin: 0 0 0 40px;
+    margin: 0px 20px 0 0;
   }
-
+  header nav ul li {
+    font-size: 18px;
+  }
   #hero {
-    height: 700px;
-    padding-top: 32px;
+    height: auto;
+    padding: 30px 0 50px;
   }
-
-  .button {
-    display: block;
-    margin: 0 auto;
+  #hero h2 {
+    font-size: 28px;
+    margin: 40px 0 60px;
   }
-
   #benefits {
-    padding: 100px 0 80px;
+    padding: 30px 0;
   }
   #benefits p, #benefits ul {
-    width: 600px;
-  }
-  #benefits ul {
-    margin: 30px 0 0 80px;
-  }
-
-  #testimonial {
-    padding: 70px 0 70px;
+    width: 82%;
+    margin: 0 auto 20px;
   }
   blockquote {
-    width: 580px;
-    margin: 0 auto;
-  }
-  blockquote span {
-    display: block;
+    font-size: 20px;
+    width: 90%;
   }
   #main {
-    margin-top: 80px;
+    margin-top: 25px;
   }
-  #posts {
-    width: 700px;
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top;
-  }
-  #sidebar {
-    width: 240px;
-    display: inline-block;
-    vertical-align: top;
-  }
-  .post {
-    border-bottom: 1px solid #043049;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-  }
-  .post img {
+  footer .logo, footer ul li {
     margin-bottom: 30px;
   }
-  .readmore {
-    text-align: right;
-    margin-top: 30px;
+  #posts, #sidebar {
+    margin: 0 auto;
+    width: 95%;
+    display: block;
   }
-
-  #sidebar ul {
-    margin-bottom: 40px;
+  .post h2 {
+    font-size: 24px;
   }
-
-  #bottom-cta {
-    padding: 30px;
+  .post p {
+    font-size: 18px;
   }
-
-  footer {
-    background: #121212;
-    padding: 65px 0 45px;
-    text-align: center;
+  .post p:first-of-type:first-letter {
+    float: none;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0;
+    font-weight: 300;
   }
-  footer .logo {
-    margin-bottom: 68px;
-  }
-}
-
-/*******************************************/
-/* TABLET
-/*******************************************/
-
-@media (min-width: 601px) and (max-width: 768px) {
-  header {
-    padding: 25px;
-    overflow: hidden;
+  .post img {
     width: 100%;
+    margin-bottom: 15px;
   }
-  header .logo {
-    float: left;
+  #sidebar h3 {
+    font-size: 24px;
   }
-  header nav {
-    float: right;
-    margin-top: 15px;
+  #sidebar ul li a, #sidebar p {
+    font-size: 18px;
   }
-  header nav ul li {
-    display: inline-block;
-    margin: 0 0 0 40px;
-  }
-
-}
-
-/*******************************************/
-/* MOBILE PHONE
-/*******************************************/
-
-@media (max-width: 600px) {
-  header {
-    padding: 25px;
-    overflow: hidden;
-    width: 100%;
-  }
-  header .logo {
-    float: left;
-  }
-  header nav {
-    float: right;
-    margin-top: 15px;
-  }
-  header nav ul li {
-    display: inline-block;
-    margin: 0 0 0 40px;
+  #sidebar img {
+    display: none;
   }
 }
 

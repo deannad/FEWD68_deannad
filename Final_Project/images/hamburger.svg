@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px"
+	 viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
+<title>hamburger</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Artboard-1" transform="translate(-11.000000, -14.000000)" sketch:type="MSArtboardGroup">
+		<g id="hamburger" transform="translate(11.000000, 14.000000)" sketch:type="MSLayerGroup">
+			<path id="Shape" sketch:type="MSShapeGroup" d="M1.5,6h20C22.328,6,23,5.328,23,4.5S22.328,3,21.5,3h-20C0.672,3,0,3.672,0,4.5
+				S0.672,6,1.5,6L1.5,6z"/>
+			<path id="Shape_1_" sketch:type="MSShapeGroup" d="M1.5,13h20c0.828,0,1.5-0.672,1.5-1.5S22.328,10,21.5,10h-20
+				C0.672,10,0,10.672,0,11.5S0.672,13,1.5,13L1.5,13z"/>
+			<path id="Shape_2_" sketch:type="MSShapeGroup" d="M1.5,20h20c0.828,0,1.5-0.672,1.5-1.5S22.328,17,21.5,17h-20
+				C0.672,17,0,17.672,0,18.5S0.672,20,1.5,20L1.5,20z"/>
+		</g>
+	</g>
+</g>
+</svg>
