@@ -2,12 +2,12 @@ $(document).ready(function() {
   
   $("#pageTopics").Stickyfill();
 
-  $( "p.question" ).on( "click", function() {
-    console.log ("Click registered");
-    $(this).addClass("pointer");
-    console.log ("Pointer added");
-    $( this ).siblings().slideToggle();
-  });
+  // $( "p.question" ).on( "click", function() {
+  //   console.log ("Click registered");
+  //   $(this).addClass("pointer");
+  //   console.log ("Pointer added");
+  //   $( this ).siblings().slideToggle();
+  // });
 
 
   var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook:.15}});
@@ -33,16 +33,33 @@ $(document).ready(function() {
     }
   });
   
-  var scenes = [
-  ];
+  var scenes = [];
+  var sectionElement;
+  var counter = 0;
+  function heightChecker(elementToMeasure){
+    // console.log(counter++, elementToMeasure.id);
+    return elementToMeasure.clientHeight;
+  }
 
   for (var i = 1; i <= 6; i++) {
+    sectionElement = document.getElementById("section" + i)
     var scene = new ScrollMagic.Scene({
-      triggerElement: "#section"+ i,
-      duration: $("#section"+i).height()
+      triggerElement: sectionElement,
+      duration: heightChecker.bind(this, sectionElement)
       }) // point of execution
     .setClassToggle("#menuItem"+i, "active") // add class toggle
+    // .addIndicators(); // add indicators (requires plugin)
     scenes.push(scene);
+    $( "#section"+ i + " p.question" ).on( "click", function() {
+      $(this).addClass("pointer");
+      var start = Date.now();
+      $( this ).siblings().slideToggle({
+        complete: function(){
+          var end = Date.now();
+          console.log("Animation length", end - start);
+        }
+      });
+    });
   }
 
   controller.addScene(scenes);
